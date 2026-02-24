@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -96,6 +97,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#7C3AED" />
       </head>
       <body className="antialiased">
+        <GoogleAnalytics />
         {children}
       </body>
     </html>
