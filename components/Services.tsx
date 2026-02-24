@@ -108,8 +108,8 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="py-24 bg-background-primary">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="services" className="py-16 sm:py-20 md:py-24 bg-background-primary">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
@@ -132,9 +132,14 @@ export default function Services() {
           <p className="text-text-secondary mb-6">
             Need a custom solution? We build bespoke strategies for complex challenges.
           </p>
-          <button className="px-8 py-3 bg-transparent border border-accent-primary text-accent-bright rounded-lg hover:bg-accent-primary hover:text-white transition-all duration-200 hover:glow-violet-sm">
+          <a 
+            href="https://forms.gle/demo-brand-consultation" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3 bg-transparent border border-accent-primary text-accent-bright rounded-lg hover:bg-accent-primary hover:text-white transition-all duration-200 hover:glow-violet-sm"
+          >
             Discuss Your Project
-          </button>
+          </a>
         </div>
       </div>
     </section>

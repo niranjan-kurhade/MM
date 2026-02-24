@@ -72,6 +72,8 @@ function PathCard({
         {/* CTA Button */}
         <a
           href={ctaLink}
+          target={ctaLink.startsWith('http') ? '_blank' : undefined}
+          rel={ctaLink.startsWith('http') ? 'noopener noreferrer' : undefined}
           className="block w-full px-6 py-4 bg-accent-primary hover:bg-accent-bright text-white text-center font-medium rounded-lg transition-all duration-200 hover:glow-violet hover:scale-[1.02]"
         >
           {ctaText}
@@ -85,8 +87,8 @@ export default function ChoicePath() {
   const [activeCard, setActiveCard] = useState<string | null>(null)
 
   return (
-    <section className="py-24 bg-background-secondary">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 sm:py-20 md:py-24 bg-background-secondary">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
@@ -111,7 +113,7 @@ export default function ChoicePath() {
             ]}
             icon="🏢"
             ctaText="Book a Brand Consultation"
-            ctaLink="#contact"
+            ctaLink="https://forms.gle/demo-brand-consultation"
             isActive={activeCard === 'brand'}
             onHover={() => setActiveCard('brand')}
             onLeave={() => setActiveCard(null)}
@@ -129,7 +131,7 @@ export default function ChoicePath() {
             ]}
             icon="⭐"
             ctaText="Apply as a Creator"
-            ctaLink="#contact"
+            ctaLink="https://forms.gle/demo-creator-application"
             isActive={activeCard === 'creator'}
             onHover={() => setActiveCard('creator')}
             onLeave={() => setActiveCard(null)}

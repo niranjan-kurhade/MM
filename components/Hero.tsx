@@ -68,8 +68,8 @@ export default function Hero() {
       <div className="absolute inset-0 gradient-mesh pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        <div className="space-y-8 animate-fade-in">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <div className="space-y-6 sm:space-y-8 animate-fade-in">
           {/* Badge */}
           <div className="inline-block">
             <div className="px-4 py-2 rounded-full bg-card-surface border border-accent-primary/30 text-sm text-text-secondary">
@@ -79,7 +79,7 @@ export default function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
             <span className="block text-text-primary">Influence.</span>
             <span className="block bg-gradient-to-r from-accent-primary via-accent-bright to-accent-primary bg-clip-text text-transparent">
               Engineered for Impact.
@@ -87,18 +87,22 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed px-4">
             Midnight Media builds high-performance influencer campaigns that drive measurable growth.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button variant="primary" size="lg" className="min-w-[220px]">
-              Book a Strategy Call
-            </Button>
-            <Button variant="secondary" size="lg" className="min-w-[220px]">
-              Learn Our Process
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 px-4">
+            <a href="https://forms.gle/demo-brand-consultation" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button variant="primary" size="lg" className="w-full sm:min-w-[220px]">
+                Book a Strategy Call
+              </Button>
+            </a>
+            <a href="#process" className="w-full sm:w-auto">
+              <Button variant="secondary" size="lg" className="w-full sm:min-w-[220px]">
+                Learn Our Process
+              </Button>
+            </a>
           </div>
 
         </div>

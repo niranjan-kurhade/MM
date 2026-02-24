@@ -7,10 +7,13 @@ import ChoicePath from '@/components/ChoicePath'
 import Testimonials from '@/components/Testimonials'
 import FinalCTA from '@/components/FinalCTA'
 import Footer from '@/components/Footer'
+import StructuredData from '@/components/StructuredData'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <>
+      <StructuredData />
+      <main className="min-h-screen">
       <Navbar />
       <Hero />
       <AuthorityStrip />
@@ -21,5 +24,6 @@ export default function Home() {
       <FinalCTA />
       <Footer />
     </main>
+    </>
   )
 }
