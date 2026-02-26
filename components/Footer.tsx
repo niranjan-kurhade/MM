@@ -12,9 +12,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Brand Section */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-accent-primary to-accent-bright rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">M</span>
+            <div className="flex items-center space-x-2 sm:space-x-3 mb-4">
+              <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-lg overflow-hidden">
+                <Image 
+                  src="/MM-logo.png" 
+                  alt="Midnight Media Logo" 
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="font-heading font-bold text-xl text-text-primary">
                 Midnight Media

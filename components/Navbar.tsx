@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Button from './Button'
 
 export default function Navbar() {
@@ -35,9 +36,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-accent-primary to-accent-bright rounded-lg flex items-center justify-center group-hover:glow-violet-sm transition-all duration-200">
-              <span className="text-white font-bold text-xl">M</span>
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-lg overflow-hidden group-hover:glow-violet-sm transition-all duration-200">
+              <Image 
+                src="/MM-logo.png" 
+                alt="Midnight Media Logo" 
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <span className="font-heading font-bold text-xl text-text-primary">
               Midnight Media

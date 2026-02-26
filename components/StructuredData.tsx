@@ -5,7 +5,7 @@ export default function StructuredData() {
     name: 'Midnight Media',
     alternateName: 'Midnight Media Agency',
     url: 'https://midnightmedia.in',
-    logo: 'https://midnightmedia.in/icon.svg',
+    logo: 'https://midnightmedia.in/MM-logo.png',
     description: 'Performance-driven influencer marketing agency specializing in high-performance campaigns, creator partnerships, and measurable growth for premium brands.',
     sameAs: [
       'https://www.linkedin.com/company/midnightmedia', // Replace with actual URLs
@@ -28,7 +28,7 @@ export default function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Midnight Media',
-    image: 'https://midnightmedia.in/icon.svg',
+    image: 'https://midnightmedia.in/MM-logo.png',
     '@id': 'https://midnightmedia.in',
     url: 'https://midnightmedia.in',
     telephone: '', // Add your phone number

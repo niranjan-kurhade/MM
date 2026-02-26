@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
@@ -33,8 +34,13 @@ export default function TermsOfService() {
       <header className="border-b border-border-subtle">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6">
           <Link href="/" className="inline-flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-accent-primary to-accent-bright rounded-lg flex items-center justify-center group-hover:glow-violet-sm transition-all duration-200">
-              <span className="text-white font-bold text-xl">M</span>
+            <div className="relative w-10 h-10 rounded-lg overflow-hidden group-hover:glow-violet-sm transition-all duration-200">
+              <Image 
+                src="/MM-logo.png" 
+                alt="Midnight Media Logo" 
+                fill
+                className="object-contain"
+              />
             </div>
             <span className="font-heading font-bold text-xl text-text-primary">
               Midnight Media
