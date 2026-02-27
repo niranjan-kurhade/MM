@@ -66,7 +66,7 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a href="https://forms.gle/demo-brand-consultation" target="_blank" rel="noopener noreferrer">
+            <a href="https://forms.gle/PqpHvHF5vqbTmpkn9" target="_blank" rel="noopener noreferrer">
               <Button variant="primary" size="md">
                 Book a Strategy Call
               </Button>
@@ -126,7 +126,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-2">
-                <a href="https://forms.gle/demo-brand-consultation" target="_blank" rel="noopener noreferrer" className="w-full">
+                <a href="https://forms.gle/PqpHvHF5vqbTmpkn9" target="_blank" rel="noopener noreferrer" className="w-full">
                   <Button variant="primary" size="md" className="w-full">
                     Book a Strategy Call
                   </Button>

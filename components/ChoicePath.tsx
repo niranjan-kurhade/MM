@@ -113,7 +113,7 @@ export default function ChoicePath() {
             ]}
             icon="🏢"
             ctaText="Book a Brand Consultation"
-            ctaLink="https://forms.gle/demo-brand-consultation"
+            ctaLink="https://forms.gle/PqpHvHF5vqbTmpkn9"
             isActive={activeCard === 'brand'}
             onHover={() => setActiveCard('brand')}
             onLeave={() => setActiveCard(null)}
@@ -131,7 +131,7 @@ export default function ChoicePath() {
             ]}
             icon="⭐"
             ctaText="Apply as a Creator"
-            ctaLink="https://forms.gle/demo-creator-application"
+            ctaLink="https://forms.gle/6Cjt9WxpgDa4b1vaA"
             isActive={activeCard === 'creator'}
             onHover={() => setActiveCard('creator')}
             onLeave={() => setActiveCard(null)}

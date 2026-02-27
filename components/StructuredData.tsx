@@ -8,9 +8,9 @@ export default function StructuredData() {
     logo: 'https://midnightmedia.in/MM-logo.png',
     description: 'Performance-driven influencer marketing agency specializing in high-performance campaigns, creator partnerships, and measurable growth for premium brands.',
     sameAs: [
-      'https://www.linkedin.com/company/midnightmedia', // Replace with actual URLs
+      'https://www.linkedin.com/company/midnight-media-in/',
       'https://twitter.com/midnightmedia',
-      'https://www.instagram.com/midnightmedia',
+      'https://www.instagram.com/midnightmedia.in/',
     ],
     contactPoint: {
       '@type': 'ContactPoint',

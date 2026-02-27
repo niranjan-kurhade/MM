@@ -78,6 +78,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: '/mm-circle-logo.png',
+    shortcut: '/mm-circle-logo.png',
+    apple: '/mm-circle-logo.png',
+  },
+  manifest: '/manifest.json',
   verification: {
     // Add these when you have them
     // google: 'your-google-verification-code',

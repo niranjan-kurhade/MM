@@ -48,7 +48,7 @@ export default function NotFound() {
             Back to Home
           </Link>
           <a 
-            href="https://forms.gle/demo-brand-consultation"
+            href="https://forms.gle/PqpHvHF5vqbTmpkn9"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-3 bg-card-surface hover:bg-background-secondary text-text-primary border border-border-subtle hover:border-accent-primary rounded-lg font-medium transition-all duration-200 w-full sm:w-auto"

@@ -30,7 +30,9 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/midnight-media-in/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-card-surface border border-border-subtle flex items-center justify-center hover:border-accent-primary hover:glow-violet-sm transition-all duration-200"
                 aria-label="LinkedIn"
               >
@@ -43,7 +45,9 @@ export default function Footer() {
                 />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/midnightmedia.in/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-card-surface border border-border-subtle flex items-center justify-center hover:border-accent-primary hover:glow-violet-sm transition-all duration-200"
                 aria-label="Instagram"
               >
@@ -80,7 +84,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/company/midnightmedia"
+                  href="https://www.linkedin.com/company/midnight-media-in/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-secondary hover:text-accent-bright transition-colors duration-200 text-sm"

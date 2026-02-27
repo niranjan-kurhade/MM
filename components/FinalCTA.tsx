@@ -20,7 +20,7 @@ export default function FinalCTA() {
         </p>
 
         {/* CTA Button */}
-        <a href="https://forms.gle/demo-brand-consultation" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block">
+        <a href="https://forms.gle/PqpHvHF5vqbTmpkn9" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block">
           <Button 
             variant="primary" 
             size="lg" 

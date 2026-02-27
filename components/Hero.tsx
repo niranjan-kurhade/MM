@@ -93,7 +93,7 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 px-4">
-            <a href="https://forms.gle/demo-brand-consultation" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <a href="https://forms.gle/PqpHvHF5vqbTmpkn9" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button variant="primary" size="lg" className="w-full sm:min-w-[220px]">
                 Book a Strategy Call
               </Button>
