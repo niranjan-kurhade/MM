@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import { Suspense } from 'react'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -108,6 +109,7 @@ export default function RootLayout({
           <GoogleAnalytics />
         </Suspense>
         {children}
+        <Analytics />
       </body>
     </html>
   )
