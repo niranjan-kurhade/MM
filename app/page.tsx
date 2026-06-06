@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import AuthorityStrip from '@/components/AuthorityStrip'
+import Brands from '@/components/Brands'
 import OurWork from '@/components/OurWork'
 import Services from '@/components/Services'
 import Process from '@/components/Process'
@@ -15,17 +16,18 @@ export default function Home() {
     <>
       <StructuredData />
       <main className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <AuthorityStrip />
-      <OurWork />
-      <Services />
-      <Process />
-      <ChoicePath />
-      <Testimonials />
-      <FinalCTA />
-      <Footer />
-    </main>
+        <Navbar />
+        <Hero />
+        <AuthorityStrip />
+        <Brands />
+        <OurWork />
+        <Services />
+        <Process />
+        <ChoicePath />
+        <Testimonials />
+        <FinalCTA />
+        <Footer />
+      </main>
     </>
   )
 }
