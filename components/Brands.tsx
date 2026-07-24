@@ -12,10 +12,11 @@ const Brands = () => {
         { name: 'Plum', logo: '/brands/plum.jpeg' },
         { name: 'Dot & Key', logo: '/brands/dot-and-key-logo.jpeg' },
         { name: 'Dinshaws Cafe', logo: '/brands/dinshaws.png' },
-        { name: 'Nutrabay', logo: '/brands/nutrabay.png' },
+        { name: 'One Gummy', logo: '/brands/onegummy.png' },
         { name: 'Gracias Granny', logo: '/brands/gracias.png' },
         { name: 'Brand Partner', logo: '/brands/images.png' },
-        { name: 'Knosh Food', logo: '/brands/knoshfood.png' },
+        { name: 'Apara', logo: '/brands/apara.png' },
+        { name: 'Vastravali Jaipur', logo: '/brands/vj.png' },
     ]
 
     const duplicatedBrands = [...brands, ...brands, ...brands]
