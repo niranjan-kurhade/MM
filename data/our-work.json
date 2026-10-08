@@ -9,6 +9,30 @@
   },
   {
     "id": "2",
+    "title": "Vastravali Jaipur",
+    "subtitle": "Instagram Reel",
+    "thumb": "/our-work/natasha-vastravali.png",
+    "category": "Fashion",
+    "link": "https://www.instagram.com/p/DcBeDuCz5f6/"
+  },
+  {
+    "id": "3",
+    "title": "BingeTown - Mumbai",
+    "subtitle": "Instagram Reel — campaign recap",
+    "thumb": "/our-work/akanksha-bingetown.png",
+    "category": "Explore",
+    "link": "https://www.instagram.com/p/DdWqUkzJWGO/"
+  },
+  {
+    "id": "4",
+    "title": "Brillare - Skincare",
+    "subtitle": "Instagram Reel",
+    "thumb": "/our-work/akanksha-brillare.png",
+    "category": "Skincare",
+    "link": "https://www.instagram.com/p/Dc_bgTlJQAS/"
+  },
+  {
+    "id": "5",
     "title": "Dinshaw's Cafe",
     "subtitle": "Instagram Reel — collaboration",
     "thumb": "/our-work/dinshaws-yogita.png",
@@ -16,39 +40,55 @@
     "link": "https://www.instagram.com/p/DXj0S5wjJhX/"
   },
   {
-    "id": "3",
+    "id": "6",
+    "title": "Goodlys App",
+    "subtitle": "Instagram Reel — September Campaign",
+    "thumb": "/our-work/disha-goodlys.png",
+    "category": "App",
+    "link": "https://www.instagram.com/reel/DdWUN7LIslS/"
+  },
+  {
+    "id": "7",
+    "title": "Goodlys App",
+    "subtitle": "Instagram Reel — September Campaign",
+    "thumb": "/our-work/esther-goodlys.png",
+    "category": "App",
+    "link": "https://www.instagram.com/p/Ddtd8otuIvq/"
+  },
+  {
+    "id": "8",
     "title": "Gracias Granny - Summer Menu",
     "subtitle": "Reel — hero creative",
     "thumb": "/our-work/gracias-saloni.png",
     "category": "Food",
     "link": "https://www.instagram.com/p/DYhcbLpjM-x/?img_index=1"
   },
-   {
-    "id": "4",
+  {
+    "id": "9",
     "title": "Apara - Summer Collection",
     "subtitle": "Instagram Reel — collaboration",
     "thumb": "/our-work/apara-sapna.png",
     "category": "Fashion",
     "link": "https://www.instagram.com/reel/Daf2XWguwTh/"
   },
-   {
-    "id": "5",
+  {
+    "id": "10",
     "title": "OPD Cover - Awareness",
     "subtitle": "Instagram Reel — collaboration",
     "thumb": "/our-work/opd-sukhmani.png",
     "category": "Health & Wellness",
     "link": "https://www.instagram.com/reel/DZmPvopMgX9/"
   },
-   {
-    "id": "6",
+  {
+    "id": "11",
     "title": "One Gummy - Wellness Gummies",
     "subtitle": "Instagram Reel — collaboration",
     "thumb": "/our-work/onegummy-aarna.png",
     "category": "Health & Wellness",
     "link": "https://www.instagram.com/reel/Dap3pVLMJIw/"
   },
-   {
-    "id": "7",
+  {
+    "id": "12",
     "title": "One Gummy - Wellness Gummies",
     "subtitle": "Instagram Reel — collaboration",
     "thumb": "/our-work/onegummy-mahi.png",
@@ -56,11 +96,27 @@
     "link": "https://www.instagram.com/reel/Da0YhT7K8aV/"
   },
   {
-    "id": "8",
+    "id": "13",
     "title": "One Gummy - Wellness Gummies",
     "subtitle": "Instagram Reel — collaboration",
     "thumb": "/our-work/onegummy-yogita.png",
     "category": "Health & Wellness",
     "link": "https://www.instagram.com/reel/Da8HYLNNm2w/"
+  },
+  {
+    "id": "14",
+    "title": "UpUrFit",
+    "subtitle": "Instagram Reel",
+    "thumb": "/our-work/tanuj-upurfit.png",
+    "category": "Fitness",
+    "link": "https://www.instagram.com/p/Ddi1-RhhAjM/"
+  },
+  {
+    "id": "15",
+    "title": "Dove",
+    "subtitle": "Instagram Reel",
+    "thumb": "/our-work/esha-dove.png",
+    "category": "Fitness",
+    "link": "https://www.instagram.com/p/DZ7yiAFoDQX/"
   }
 ]
