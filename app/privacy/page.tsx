@@ -1,31 +1,13 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { pageMetadata } from '@/lib/site'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Privacy Policy',
   description: 'Privacy Policy for Midnight Media - Learn how we collect, use, and protect your personal information when you use our influencer marketing services.',
-  openGraph: {
-    title: 'Privacy Policy | Midnight Media',
-    description: 'Learn how Midnight Media collects, uses, and protects your personal information.',
-    url: 'https://midnightmedia.in/privacy',
-    siteName: 'Midnight Media',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary',
-    title: 'Privacy Policy | Midnight Media',
-    description: 'Learn how Midnight Media collects, uses, and protects your personal information.',
-  },
-  alternates: {
-    canonical: 'https://midnightmedia.in/privacy',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-}
+  path: '/privacy',
+})
 
 export default function PrivacyPolicy() {
   return (

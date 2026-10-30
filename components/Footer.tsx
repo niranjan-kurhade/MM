@@ -1,7 +1,6 @@
-'use client'
-
 import Link from 'next/link'
 import Image from 'next/image'
+import { servicePages } from '@/lib/services'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -9,7 +8,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-background-secondary border-t border-border-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Brand Section */}
           <div>
             <div className="flex items-center space-x-2 sm:space-x-3 mb-4">
@@ -63,6 +62,38 @@ export default function Footer() {
           </div>
 
           {/* Links Sections */}
+          <div className="md:ml-auto">
+            <h3 className="font-semibold text-text-primary mb-4">Services</h3>
+            <ul className="space-y-3">
+              {servicePages.map((service) => (
+                <li key={service.slug}>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="text-text-secondary hover:text-accent-bright transition-colors duration-200 text-sm"
+                  >
+                    {service.h1}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/work"
+                  className="text-text-secondary hover:text-accent-bright transition-colors duration-200 text-sm"
+                >
+                  Campaign Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-text-secondary hover:text-accent-bright transition-colors duration-200 text-sm"
+                >
+                  Blog
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           <div className="md:text-right md:ml-auto">
             <h3 className="font-semibold text-text-primary mb-4">Company</h3>
             <ul className="space-y-3">

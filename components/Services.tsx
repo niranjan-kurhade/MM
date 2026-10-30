@@ -1,145 +1,105 @@
 'use client'
 
-import Card from './Card'
+import Link from 'next/link'
+import { siteConfig } from '@/lib/site'
 
-interface ServiceCardProps {
-  icon: string
+interface ServiceRowProps {
+  index: number
   title: string
   description: string
-  highlights?: string[]
+  href?: string
 }
 
-function ServiceCard({ icon, title, description, highlights }: ServiceCardProps) {
-  return (
-    <Card className="h-full flex flex-col">
-      <div className="mb-4">
-        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-accent-primary to-accent-bright flex items-center justify-center text-2xl">
-          {icon}
-        </div>
+function ServiceRow({ index, title, description, href }: ServiceRowProps) {
+  const content = (
+    <>
+      <span className="font-heading text-sm text-accent-bright tabular-nums pt-1.5">{String(index + 1).padStart(2, '0')}</span>
+      <div className="flex-1">
+        <h3 className="text-xl sm:text-2xl font-heading font-semibold text-text-primary transition-colors group-hover:text-accent-bright">
+          {title}
+        </h3>
+        <p className="mt-1 text-text-secondary">{description}</p>
       </div>
-      <h3 className="text-xl font-bold text-text-primary mb-3">{title}</h3>
-      <p className="text-text-secondary mb-4 flex-grow">{description}</p>
-      {highlights && (
-        <ul className="space-y-2">
-          {highlights.map((highlight, index) => (
-            <li key={index} className="flex items-start text-sm text-text-secondary">
-              <svg
-                className="w-5 h-5 text-accent-primary mr-2 flex-shrink-0 mt-0.5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              {highlight}
-            </li>
-          ))}
-        </ul>
+      {href && (
+        <span
+          className="text-2xl text-text-secondary transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent-bright"
+          aria-hidden="true"
+        >
+          ↗
+        </span>
       )}
-    </Card>
+    </>
+  )
+
+  return (
+    <li>
+      {href ? (
+        <Link href={href} className="group flex gap-6 py-6 sm:py-7">
+          {content}
+        </Link>
+      ) : (
+        <div className="group flex gap-6 py-6 sm:py-7">{content}</div>
+      )}
+    </li>
   )
 }
 
 export default function Services() {
   const services = [
     {
-      icon: '🎯',
       title: 'Influencer Campaign Strategy',
-      description: 'Data-driven campaign architecture designed for maximum ROI and brand alignment.',
-      highlights: [
-        'Audience analysis & targeting',
-        'Platform strategy optimization',
-        'Budget allocation modeling',
-      ],
+      href: '/services/influencer-marketing-agency',
+      description: 'Goals, audience, creators and budget mapped before anything goes live.',
     },
     {
-      icon: '🔍',
       title: 'Creator Discovery & Vetting',
-      description: 'Deep-dive research to find authentic voices that move the needle for your brand.',
-      highlights: [
-        'Fraud detection & authenticity scoring',
-        'Audience overlap analysis',
-        'Brand safety verification',
-      ],
+      description: 'Real audiences, real engagement. Fake followers filtered out.',
     },
     {
-      icon: '🎬',
-      title: 'Paid UGC & Performance Ads',
-      description: 'Convert creator content into high-performing paid media assets.',
-      highlights: [
-        'UGC content production',
-        'Multi-platform distribution',
-        'Creative testing & iteration',
-      ],
+      title: 'UGC Content & Performance Ads',
+      href: '/services/ugc-creator-agency',
+      description: 'Authentic creator videos scripted to convert on Meta and Instagram.',
     },
     {
-      icon: '🚀',
       title: 'Product Launch Amplification',
-      description: 'Synchronized influencer activations that create cultural momentum.',
-      highlights: [
-        'Launch event coordination',
-        'Seeding & unboxing campaigns',
-        'Viral content engineering',
-      ],
+      href: '/services/instagram-influencer-marketing',
+      description: 'Coordinated creator drops that make launch week impossible to miss.',
     },
     {
-      icon: '🤝',
       title: 'Long-Term Brand Partnerships',
-      description: 'Build sustained influence through strategic creator relationships.',
-      highlights: [
-        'Ambassador program management',
-        'Content collaboration planning',
-        'Relationship development',
-      ],
+      description: 'Ambassador programs that compound trust over time.',
     },
     {
-      icon: '⭐',
       title: 'Talent Management',
-      description: 'Comprehensive management services for creators looking to scale their influence.',
-      highlights: [
-        'Brand deal negotiation',
-        'Content strategy & growth',
-        'Personal brand development',
-      ],
+      href: '/services/influencer-talent-management',
+      description: 'Better deals, fair contracts and growth strategy for creators.',
     },
   ]
 
   return (
-    <section id="services" className="py-16 sm:py-20 md:py-24 bg-background-primary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
-            How We <span className="text-accent-bright">Engineer Influence</span>
-          </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            Comprehensive influencer marketing services designed for performance and authenticity.
-          </p>
-        </div>
+    <section id="services" className="py-16 sm:py-20 md:py-28 bg-background-secondary">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-[1fr_1.6fr] gap-10 lg:gap-16">
+          <div className="lg:sticky lg:top-28 self-start">
+            <p className="text-sm uppercase tracking-[0.3em] text-text-secondary mb-4">Influencer marketing &amp; UGC services</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-text-primary leading-tight">
+              From brief to buzz. <span className="text-accent-bright">All in-house.</span>
+            </h2>
+            <a
+              href={siteConfig.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-lg bg-accent-primary px-6 py-3 font-medium text-white transition-all duration-200 hover:bg-accent-bright hover:glow-violet-sm"
+            >
+              Discuss your project
+            </a>
+          </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <ServiceCard key={index} {...service} />
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-text-secondary mb-6">
-            Need a custom solution? We build bespoke strategies for complex challenges.
-          </p>
-          <a 
-            href="https://forms.gle/PqpHvHF5vqbTmpkn9" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-3 bg-transparent border border-accent-primary text-accent-bright rounded-lg hover:bg-accent-primary hover:text-white transition-all duration-200 hover:glow-violet-sm"
-          >
-            Discuss Your Project
-          </a>
+          <ol className="divide-y divide-border-subtle border-y border-border-subtle">
+            {services.map((service, index) => (
+              <ServiceRow key={service.title} index={index} {...service} />
+            ))}
+          </ol>
         </div>
       </div>
     </section>

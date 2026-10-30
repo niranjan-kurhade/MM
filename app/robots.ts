@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { siteConfig } from '@/lib/site'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,15 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/'],
-      },
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-        crawlDelay: 0,
+        disallow: ['/api/'],
       },
     ],
-    sitemap: 'https://midnightmedia.in/sitemap.xml',
-    host: 'https://midnightmedia.in',
+    sitemap: `${siteConfig.url}/sitemap.xml`,
   }
 }

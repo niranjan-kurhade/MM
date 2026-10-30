@@ -8,7 +8,6 @@ interface PathCardProps {
   subtitle: string
   description: string
   features: string[]
-  icon: string
   ctaText: string
   ctaLink: string
   isActive: boolean
@@ -21,7 +20,6 @@ function PathCard({
   subtitle, 
   description, 
   features, 
-  icon, 
   ctaText, 
   ctaLink,
   isActive,
@@ -34,10 +32,7 @@ function PathCard({
       onMouseLeave={onLeave}
       className="relative"
     >
-      <Card className={`h-full transition-all duration-300 ${isActive ? 'scale-105 border-accent-primary' : ''}`}>
-        {/* Icon */}
-        <div className="text-6xl mb-6 text-center">{icon}</div>
-        
+      <Card className={`h-full transition-all duration-300 ${isActive ? 'scale-[1.02] border-accent-primary' : ''}`}>
         {/* Header */}
         <div className="text-center mb-6">
           <h3 className="text-3xl font-bold text-text-primary mb-2">{title}</h3>
@@ -91,12 +86,10 @@ export default function ChoicePath() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
-            Choose Your <span className="text-accent-bright">Path</span>
+          <p className="text-sm uppercase tracking-[0.3em] text-text-secondary mb-4">For brands &amp; creators</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-text-primary">
+            Two doors. <span className="text-accent-bright">One team.</span>
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            Whether you're a brand looking to scale or a creator ready to monetize, we've got you covered.
-          </p>
         </div>
 
         {/* Path Cards */}
@@ -106,12 +99,10 @@ export default function ChoicePath() {
             subtitle="Scale Your Influence"
             description="Partner with us to launch high-performance influencer campaigns that drive real business results."
             features={[
-              'Strategic campaign planning',
-              'Hand-picked creator matching',
+              'Strategy & creator matching',
               'End-to-end campaign management',
-              'Performance tracking & optimization',
+              'Performance tracking & reporting',
             ]}
-            icon="🏢"
             ctaText="Book a Brand Consultation"
             ctaLink="https://forms.gle/PqpHvHF5vqbTmpkn9"
             isActive={activeCard === 'brand'}
@@ -124,12 +115,10 @@ export default function ChoicePath() {
             subtitle="Amplify Your Impact"
             description="Join our talent roster and get access to premium brand deals, strategic guidance, and growth support."
             features={[
-              'Exclusive brand partnerships',
-              'Professional representation',
-              'Content & growth strategy',
+              'Paid brand partnerships',
               'Negotiation & contract support',
+              'Content & growth strategy',
             ]}
-            icon="⭐"
             ctaText="Apply as a Creator"
             ctaLink="https://forms.gle/6Cjt9WxpgDa4b1vaA"
             isActive={activeCard === 'creator'}
@@ -141,7 +130,7 @@ export default function ChoicePath() {
         {/* Bottom Note */}
         <div className="text-center mt-12">
           <p className="text-text-secondary text-sm">
-            Not sure which path is right for you? <a href="#contact" className="text-accent-bright hover:underline">Let's talk</a>
+            Not sure which path is right for you? <a href="mailto:hello@midnightmedia.in" className="text-accent-bright hover:underline">Let's talk</a>
           </p>
         </div>
       </div>

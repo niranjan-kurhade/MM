@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import Button from './Button'
+import { siteConfig } from '@/lib/site'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -18,13 +18,12 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: 'Home', href: '/#home' },
-    { name: 'Brands', href: '/#brands' },
-    { name: 'Our Work', href: '/#ourwork' },
+    { name: 'Work', href: '/#ourwork' },
     { name: 'Services', href: '/#services' },
     { name: 'Process', href: '/#process' },
-    { name: 'About', href: '/#about' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'For Creators', href: '/services/influencer-talent-management' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'FAQ', href: '/#faq' },
   ]
 
   return (
@@ -67,10 +66,13 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a href="https://forms.gle/PqpHvHF5vqbTmpkn9" target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" size="md">
-                Book a Strategy Call
-              </Button>
+            <a
+              href={siteConfig.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-accent-primary px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-accent-bright hover:glow-violet-sm"
+            >
+              Book a Call
             </a>
           </div>
 
@@ -79,6 +81,7 @@ export default function Navbar() {
             className="md:hidden text-text-primary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
               <svg
@@ -127,10 +130,13 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-2">
-                <a href="https://forms.gle/PqpHvHF5vqbTmpkn9" target="_blank" rel="noopener noreferrer" className="w-full">
-                  <Button variant="primary" size="md" className="w-full">
-                    Book a Strategy Call
-                  </Button>
+                <a
+                  href={siteConfig.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full items-center justify-center rounded-lg bg-accent-primary px-6 py-3 font-medium text-white"
+                >
+                  Book a Strategy Call
                 </a>
               </div>
             </div>

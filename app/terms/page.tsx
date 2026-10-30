@@ -1,31 +1,13 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { pageMetadata } from '@/lib/site'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Terms of Service',
   description: 'Terms of Service for Midnight Media - Read our terms and conditions for using our influencer marketing services and website.',
-  openGraph: {
-    title: 'Terms of Service | Midnight Media',
-    description: 'Read our terms and conditions for using Midnight Media influencer marketing services.',
-    url: 'https://midnightmedia.in/terms',
-    siteName: 'Midnight Media',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary',
-    title: 'Terms of Service | Midnight Media',
-    description: 'Read our terms and conditions for using Midnight Media services.',
-  },
-  alternates: {
-    canonical: 'https://midnightmedia.in/terms',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-}
+  path: '/terms',
+})
 
 export default function TermsOfService() {
   return (

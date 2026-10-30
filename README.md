@@ -76,15 +76,20 @@ npm start
 │   └── sitemap.ts          # SEO sitemap
 ├── components/
 │   ├── Navbar.tsx          # Sticky navigation
-│   ├── Hero.tsx            # Hero section with animated mesh
-│   ├── AuthorityStrip.tsx  # Value proposition showcase
-│   ├── Services.tsx        # Services grid (6 services)
+│   ├── Hero.tsx            # Hero with brand/creator toggle and reel wall
+│   ├── Stats.tsx           # Count-up stats band
+│   ├── Brands.tsx          # Brand logo marquee
+│   ├── OurWork.tsx         # Featured reels grid
+│   ├── WorkGallery.tsx     # Filterable reels gallery (/work)
+│   ├── WorkCard.tsx        # Reel thumbnail card
+│   ├── TickerBand.tsx      # Scrolling text band
+│   ├── Services.tsx        # Numbered services list
 │   ├── Process.tsx         # The Midnight Method (3 steps)
 │   ├── ChoicePath.tsx      # Brand/Creator selection
-│   ├── Testimonials.tsx    # Industry perspectives
+│   ├── FAQ.tsx             # FAQ accordion + FAQPage schema
 │   ├── FinalCTA.tsx        # Conversion CTA
 │   ├── Footer.tsx          # Site footer
-│   ├── Button.tsx          # Reusable button component
+│   ├── Marquee.tsx         # CSS-only marquee
 │   ├── Card.tsx            # Reusable card component
 │   └── ScrollReveal.tsx    # Scroll animation wrapper
 └── tailwind.config.ts      # Tailwind configuration

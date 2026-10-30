@@ -1,7 +1,7 @@
 {
   "name": "Midnight Media",
   "short_name": "Midnight",
-  "description": "Performance-driven influencer marketing agency",
+  "description": "Influencer marketing & UGC creator agency in India",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#050505",
@@ -9,12 +9,12 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/mm-circle-logo.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/mm-circle-logo.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

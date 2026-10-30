@@ -1,10 +1,12 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
+import 'lenis/dist/lenis.css'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
-import { Suspense } from 'react'
+import SmoothScroll from '@/components/SmoothScroll'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { siteConfig } from '@/lib/site'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -18,30 +20,24 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap',
 })
 
+export const viewport: Viewport = {
+  themeColor: '#050505',
+  colorScheme: 'dark',
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://midnightmedia.in'), 
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: 'Midnight Media | Performance-Driven Influencer Marketing Agency',
-    template: '%s | Midnight Media'
+    default: siteConfig.title,
+    template: '%s | Midnight Media',
   },
-  description: 'Midnight Media engineers influence. Leading influencer marketing agency specializing in high-performance campaigns, creator partnerships, and measurable growth for premium brands.',
-  keywords: [
-    'Midnight Media',
-    'influencer marketing agency',
-    'performance marketing',
-    'brand partnerships',
-    'creator marketing',
-    'influencer campaigns',
-    'social media marketing',
-    'content creator partnerships',
-    'UGC content',
-    'brand influencer strategy',
-    'ROI-driven marketing',
-    'premium brand marketing'
-  ],
-  authors: [{ name: 'Midnight Media' }],
-  creator: 'Midnight Media',
-  publisher: 'Midnight Media',
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  keywords: siteConfig.keywords,
+  category: 'marketing',
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
   formatDetection: {
     email: false,
     address: false,
@@ -49,26 +45,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: 'https://midnightmedia.in',
-    siteName: 'Midnight Media',
-    title: 'Midnight Media | Performance-Driven Influencer Marketing Agency',
-    description: 'We engineer influence. High-performance influencer campaigns that drive measurable growth for premium brands.',
-    images: [
-      {
-        url: '/og-image.png', // Add this image to your public folder
-        width: 1200,
-        height: 630,
-        alt: 'Midnight Media - Performance-Driven Influencer Marketing',
-      },
-    ],
+    locale: 'en_IN',
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Midnight Media | Performance-Driven Influencer Marketing Agency',
-    description: 'We engineer influence. High-performance influencer campaigns that drive measurable growth for premium brands.',
-    images: ['/og-image.png'],
-    creator: '@midnightmedia', 
+    title: siteConfig.title,
+    description: siteConfig.description,
   },
   robots: {
     index: true,
@@ -81,16 +66,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: {
-    icon: '/mm-circle-logo.png',
-    shortcut: '/mm-circle-logo.png',
-    apple: '/mm-circle-logo.png',
-  },
   manifest: '/manifest.json',
   verification: {
-    // Add these when you have them
-    // google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 }
 
@@ -100,15 +78,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <head>
-        <link rel="canonical" href="https://midnightmedia.in" />
-        <meta name="theme-color" content="#7C3AED" />
-      </head>
+    <html lang="en-IN" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="antialiased">
-        <Suspense fallback={null}>
-          <GoogleAnalytics />
-        </Suspense>
+        <GoogleAnalytics />
+        <SmoothScroll />
         {children}
         <Analytics />
         <SpeedInsights />
